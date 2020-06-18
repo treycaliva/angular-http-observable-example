@@ -1,0 +1,14 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let h of holidays">
+      <td>{{ h.name }}</td>
+      <td>{{ h.date }}</td>
+    </tr>
+  </tbody>
+</table>

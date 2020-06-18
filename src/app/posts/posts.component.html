@@ -1,0 +1,9 @@
+<table>
+  <tbody>
+    <tr *ngFor="let p of post$ | async">
+      <td>{{ p.id }}</td>
+      <td>{{ p.title }}</td>
+      <td>{{ p.body }}</td>
+    </tr>
+  </tbody>
+</table>
