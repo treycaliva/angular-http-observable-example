@@ -12,15 +12,15 @@ export class HolidaysComponent implements OnInit {
   holidays: Holiday[];
 
   @Input()
-  result$: Observable<{ response: any}>;
+  result$: Observable<any>;
 
   constructor(private holidayService: HolidayService) { 
-    this.result$ = holidayService.resolveHolidays();
+    this.result$ = holidayService.getHolidays();
   }
 
   ngOnInit(): void {
     this.result$.subscribe(res => {
-      this.holidays = res.response.holidays;
+      this.holidays = res.holidays;
       return this.holidays;
     });
   }
